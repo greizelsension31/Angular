@@ -6,19 +6,20 @@
   <dd>{{ name }}</dd>
 
   <td>Edad:</td>
-  <dd>{{age}}</dd>
+  <dd>{{ age }}</dd>
 
   <td>Metodo:</td>
-  <dd>algun metodo</dd>
-
+  <dd>{{ getHeroDescription() }}</dd>  <!mande a llamar () la invocacion de una funcion.!>
   <td>Capitazado:</td>
-  <dd>nombre capitalizado</dd>
+  <dd>{{ capitalizedName }}</dd>
 </dl>
 
-<button class="btn btn-primary mx-2">
+<button
+ (click)="changeHero()"
+ class="btn btn-primary mx-2">
   Cambiar nombre
 </button>
 
-<button class="btn btn-primary">
+<button (click)="changeAge()" class="btn btn-primary"> <! cambiar la edad haciendo click llamo al metodo changeAge!>
   Cambiar edad
 </button>
