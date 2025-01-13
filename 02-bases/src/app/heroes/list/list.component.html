@@ -1,1 +1,27 @@
-<p>list works!</p>
+<h3>listado de Heroes</h3>
+<div *ngIf="deletedHero; else nothingWasDeleted"> <!-- usando el ngif-eslse-->
+<h3>Heroe Borrado <small class="text-danger">{{deletedHero}}</small> </h3>
+</div>
+
+<ng-template #nothingWasDeleted> <!-- en angular el #nothingWasDeleted es una referencia local-->
+  <h3> No ha Borrado nada.</h3>
+</ng-template>
+
+
+<button
+*ngIf="heroNames.length>0"
+(click)="removeLastHero()"
+class="btn btn-outline-danger">
+Borrar un ultimo Heore
+</button>
+
+
+
+<ul class = "mt2 list-groud">
+  <!-- creando elementos  -->
+  <li *ngFor="let name of heroNames"
+   Class="list-groud-item" >
+  {{name}}
+  </li>
+
+</ul>

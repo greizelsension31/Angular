@@ -28,4 +28,12 @@ export class HeroComponent {
     this.age =26;
 
   }
+  resetForm():void{
+    this.name='iroman';
+    this.age=45;
+    // document.querySelectorAll('h1')!.forEach(element=> {
+    //   element.innerHTML ='<h1>Desde angular</h1>';
+    // });
+  }
+
 }
